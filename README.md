@@ -1,52 +1,94 @@
+#  Adaptive Active Suspension Control System
 
-# Active Suspension System
+##  Overview
 
-## Overview
+This project presents an **Adaptive Active Suspension Control System** developed using **MATLAB** and **Simulink** to improve vehicle ride comfort and stability under different road disturbances.
 
-This project presents a **PD Controlled Active Suspension System** developed using MATLAB and Simulink.  
-The main objective of the project is to reduce unwanted vehicle vibrations caused by road disturbances and improve ride comfort and vehicle stability.
+Conventional suspension systems often experience excessive oscillations and poor damping when vehicles encounter potholes, speed breakers, or rough terrain. To address this issue, a **PD-controlled active suspension system** was designed and compared against a normal uncontrolled suspension system.
 
-The system compares:
+The project combines:
+- Real-time suspension animation
+- Live response visualization
+- Performance analysis dashboard
+- Multiple road condition simulations
+- Simulink-based control modeling
 
-- Passive Suspension System (Without Controller)
-- Active Suspension System using PD Controller
-
-The project includes:
-- MATLAB simulations
-- Simulink modeling
-- Real-time vehicle animation
-- Performance dashboard
-- Road condition simulator
+to create an interactive and engineering-focused suspension analysis platform.
 
 ---
 
-# Problem Statement
-
-Vehicle suspension systems experience vibrations due to uneven road conditions such as:
-- speed breakers
-- potholes
-- rough terrain
-
-Excessive vibrations reduce:
-- passenger comfort
-- vehicle stability
-- ride quality
-
-This project uses a **PD controller** to minimize oscillations and improve suspension performance.
-
----
-
-# Objective
+#  Objectives
 
 - Reduce vehicle body oscillations
-- Improve damping characteristics
-- Reduce settling time
 - Improve ride comfort
-- Compare controlled and uncontrolled suspension systems
+- Minimize settling time
+- Improve damping performance
+- Analyze suspension behavior under different road conditions
+- Compare controlled and uncontrolled systems
 
 ---
 
-# Technologies Used
+#  Key Features
+
+##  Real-Time Suspension Animation
+A moving vehicle animation was created to visually demonstrate suspension behavior while passing over road disturbances.
+
+The simulation compares:
+-  Without Controller
+-  Adaptive Active Suspension
+
+This clearly shows the reduction in oscillations and faster stabilization achieved using the controller.
+
+---
+
+##  Live Suspension Dashboard
+The project includes a synchronized real-time response graph along with the animation to monitor suspension displacement dynamically.
+
+This provides both:
+- visual understanding
+- engineering analysis
+
+simultaneously.
+
+---
+
+##  Multiple Road Conditions
+The system was tested under multiple realistic road conditions:
+
+- Smooth Road
+- Speed Breaker
+- Pothole
+- Rough Terrain
+
+This helps evaluate the effectiveness of the controller under varying disturbances.
+
+---
+
+##  Performance Analysis
+The project evaluates:
+- Peak Oscillation
+- Settling Time
+- Ride Stability
+- Vibration Reduction
+- Passenger Comfort Improvement
+
+The controlled suspension system demonstrated significantly better damping performance and faster recovery after disturbances.
+
+---
+
+#  System Model
+
+The suspension system is modeled using the transfer function:
+
+\[
+G(s) = \frac{1}{s^2 + 3s + 2}
+\]
+
+A PD controller was implemented to reduce oscillatory behavior and improve disturbance rejection capability.
+
+---
+
+#  Software & Tools Used
 
 - MATLAB
 - Simulink
@@ -54,152 +96,97 @@ This project uses a **PD controller** to minimize oscillations and improve suspe
 
 ---
 
-# System Model
+#  Project Screenshots
 
-The suspension system transfer function used is:
+## Live Suspension Dashboard
 
-\[
-G(s)=\frac{1}{s^2+3s+2}
-\]
-
-The PD controller is defined as:
-
-\[
-C(s)=K_p+K_ds
-\]
-
-Where:
-
-- \(K_p\) = Proportional Gain
-- \(K_d\) = Derivative Gain
+![Dashboard](plots/final_dashboard.png)
 
 ---
 
-# Features
+## Performance Dashboard
 
-## 1. Simulink Suspension Model
-- Closed-loop PD control system
-- Feedback control implementation
-- Controlled vs uncontrolled response comparison
-
-## 2. MATLAB Step Response Analysis
-- Step response comparison
-- Performance metrics calculation
-- Settling time analysis
-
-## 3. Vehicle Animation
-- Real-time vehicle body movement
-- Road bump interaction
-- Suspension vibration visualization
-
-## 4. Live Performance Dashboard
-- Peak oscillation analysis
-- Settling time comparison
-- Ride comfort improvement metrics
-
-## 5. Road Condition Simulator
-Simulation under different road conditions:
-- Smooth Road
-- Speed Breaker
-- Pothole
-- Rough Terrain
-
----
-
-# Working Principle
-
-1. Road disturbance acts as input to the suspension system.
-2. The passive suspension system produces oscillations.
-3. The PD controller generates corrective control action.
-4. The controller improves damping and reduces oscillations.
-5. System responses are compared using graphs, dashboards, and animations.
-
----
-
-# Project Structure
-
-```text
-Active-Suspension-System/
-│
-├── MATLAB_Code/
-├── Simulink_Model/
-├── Results/
-├── Demo_Video/
-├── Documentation/
-└── README.md
-```
-
----
-
-# Performance Improvements
-
-The PD controlled suspension system shows:
-
-- Reduced settling time
-- Reduced oscillations
-- Improved damping
-- Better ride stability
-- Improved passenger comfort
-
----
-
-# How to Run the Project
-
-## MATLAB Scripts
-
-1. Open MATLAB
-2. Navigate to the project folder
-3. Run the required `.m` files
-
-Example:
-
-```matlab
-run('live_dashboard.m')
-```
+![Performance Dashboard](plots/performance_dashboard.png)
 
 ---
 
 ## Simulink Model
 
-1. Open MATLAB
-2. Open the `.slx` Simulink model
-3. Click **Run**
-4. Observe the response graphs and outputs
+![Simulink Model](plots/simulink_model.png)
+
+---
+
+## Simulink Response
+
+![Simulink Response](plots/simulink_response.png)
+
+---
+
+#  Repository Structure
+
+```text
+AdaptiveSuspensionProject
+│
+├── code
+│   ├── main.m
+│   ├── suspension_animation.m
+│   ├── live_suspension_dashboard.m
+│   ├── performance_dashboard.m
+│   ├── road_modes.m
+│
+├── plots
+│   ├── final_dashboard.png
+│   ├── performance_dashboard.png
+│   ├── simulink_model.png
+│   ├── simulink_response.png
+│
+├── videos
+│   ├── suspension_demo.mp4
+│   ├── live_dashboard_demo.mp4
+│
+├── simulink_models
+│   ├── active_suspension_simulink.slx
+│
+└── README.md
+```
 
 ---
 
 # Results
 
-The controlled suspension system demonstrated:
-- smoother response
-- lower vibration amplitude
-- faster stabilization
+The adaptive active suspension system successfully:
 
-compared to the uncontrolled suspension system.
+ Reduced vehicle oscillations  
+ Improved damping behavior  
+ Reduced settling time  
+ Improved passenger comfort  
+ Increased ride stability  
+
+Compared to the uncontrolled suspension system, the PD-controlled suspension stabilized much faster after road disturbances.
 
 ---
 
-# Future Scope
+#  Future Improvements
 
-Future improvements can include:
-
-- Adaptive Control
-- PID/Fuzzy Controllers
+Possible future enhancements include:
+- Adaptive gain tuning
+- AI-based road prediction
 - Semi-active suspension systems
 - Real-time sensor integration
-- IoT-based monitoring
-- Hardware implementation using microcontrollers
+- 3D vehicle dynamics visualization
 
 ---
 
-# Conclusion
+#  Conclusion
 
-The project successfully demonstrates how a PD controller improves the performance of an active suspension system by reducing vibrations and improving ride comfort under different road conditions.
+This project demonstrates how control system techniques can be used to improve vehicle suspension performance under varying road conditions.
+
+Using MATLAB and Simulink, the suspension system was modeled, analyzed, controlled, and visualized through real-time simulations and interactive dashboards. The project successfully combines engineering analysis with real-time visualization to create an effective adaptive active suspension system.
 
 ---
 
-# Authors
+#  Developed For
 
-Hackathon Project Team
-# Anshika MG
-# Payal Prerana M
+## CONTROL CRAFT HACKATHON
+
+Developed using MATLAB & Simulink for intelligent suspension control analysis.
